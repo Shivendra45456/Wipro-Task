@@ -1,0 +1,28 @@
+package com.ecommerce;
+
+
+public class Electronics extends Product {
+    private String brand;
+    private int warrantyInMonths;
+
+    public Electronics(String id, String name, double price, String brand, int warrantyInMonths) {
+        super(id, name, price);
+        this.brand = brand;
+        this.warrantyInMonths = warrantyInMonths;
+    }
+    
+    //update
+    public Electronics(String id, String name, double price, String brand, int warrantyInMonths, int stock) {
+        super(id, name, price);
+        this.brand = brand;
+        this.warrantyInMonths = warrantyInMonths;
+        this.stock = stock;
+    }
+
+
+    @Override
+    public void displayDetails() {
+        System.out.println("Electronics: " + name + " | Brand: " + brand +
+                " | Warranty: " + warrantyInMonths + " months | Price: ₹" + price);
+    }
+}
